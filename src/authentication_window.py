@@ -116,7 +116,7 @@ class AuthenticationWindow(QMainWindow):
             return
         # If the certificates were stored in disk then provide the option
         # to verify them
-        if not os.path.exists(self.config.certificate_path):
+        if not os.path.exists(os.path.join(self.config.credentials_path, "identity_wallet.db")):
             QMessageBox.information(self, self.tr("Certificado"), self.tr("No se pudo obtener el certificado"))
             self.generate_credential_button.setEnabled(True)
             self.generate_credential_button.setStyleSheet("background-color : green")

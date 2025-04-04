@@ -9,6 +9,7 @@ from asn1crypto import pem, x509
 from certvalidator import CertificateValidator, ValidationContext, errors
 from configuration import Configuration
 from signature import Signature
+from storage import Storage
 
 # This class helps to validate the certificate extracted from the smart card
 # to see if it actually was signed by the goverment chain of trust
@@ -24,6 +25,7 @@ class Verification:
 
         # We have a folder with the goverment certificates
         self.root_CA_path = self.config.root_CA_path
+        self.storage = Storage(self.pin, self.credentials_path)
 
     # Actually carry our the signature verification process
     def verify_certificate(self, user_certificate_path):
@@ -34,10 +36,10 @@ class Verification:
                 trust_roots.append(der_bytes)
 
         # Load user certificate
-        with open(user_certificate_path, 'rb') as f:
-            end_entity_cert = f.read()
-            if pem.detect(end_entity_cert):
-                _, _, end_entity_cert = pem.unarmor(end_entity_cert)
+        end_entity_cert = self.storage.get_identity("Firma Digital AUTENTICACION")
+        self.storage.close_database()
+        if pem.detect(end_entity_cert):
+            _, _, end_entity_cert = pem.unarmor(end_entity_cert)
         
         user_cert = x509.Certificate.load(end_entity_cert)
         context = ValidationContext(trust_roots=trust_roots)
