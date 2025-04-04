@@ -2,7 +2,7 @@
 
 set -xe
 
-VERSION=0.6.3
+VERSION=0.7.0
 NAME='zk-firma-digital'
 PACKAGE='zk-firma-digital'
 ARCH='amd64'
