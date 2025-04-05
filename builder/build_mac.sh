@@ -5,7 +5,7 @@ set -xe
 
 source /etc/profile
 export LC_ALL="en_US.UTF-8"
-VERSION='0.6.2'
+VERSION='0.7.0'
 
 cd src
 pip install -r requirements.txt
