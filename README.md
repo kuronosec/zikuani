@@ -32,7 +32,7 @@ Our project aims to address the privacy issues in identity systems by developing
 
 
 ## Hardware Requirements
-To run ZK-Firma-Digital, ensure your system meets at least the following hardware requirements:
+To run Zikuani, ensure your system meets at least the following hardware requirements:
 
 | **Component** | **Specification**          |
 |---------------|-----------------------------|
@@ -44,15 +44,15 @@ To run ZK-Firma-Digital, ensure your system meets at least the following hardwar
 ### Windows
 
 1. Download the installer:
-[Windows Installer](https://app.sakundi.io:9090/zk-firma-digital-0.6.3.exe)
+[Windows Installer](https://app.sakundi.io:9090/Zikuani-0.6.3.exe)
 
 2. Verify the sha256 hash:
     ```bash
-    certutil -hashfile "C:\file\path\zk-firma-digital-0.6.3.exe" SHA256
+    certutil -hashfile "C:\file\path\Zikuani-0.6.3.exe" SHA256
     ```
     The result should match:
     ```bash
-    c116a271668e9e430116cd335f7bb4128d1af4d387ad7593330850932281cf07  zk-firma-digital-0.6.3.exe
+    c116a271668e9e430116cd335f7bb4128d1af4d387ad7593330850932281cf07  Zikuani-0.6.3.exe
     ```
 3. Run the installer if the hash matches.
 
@@ -62,48 +62,48 @@ To run ZK-Firma-Digital, ensure your system meets at least the following hardwar
     * Insert your smart card into a USB port.
     * Run: 
         ```bash
-        "C:\Program Files\zk-firma-digital\zk-firma-digital.exe"
+        "C:\Program Files\Zikuani\Zikuani.exe"
         ```
-    * Alternatively, search for ZK Firma Digital in the Start menu.
+    * Alternatively, search for Zikuani in the Start menu.
 
 ### Linux (Debian)
 
 1. Download the installer:
     ```bash
-    wget https://app.sakundi.io:9090/zk-firma-digital_0.6.3_amd64.deb
+    wget https://app.sakundi.io:9090/Zikuani_0.6.3_amd64.deb
     ```
 2. Verify the sha256 hash:
     ```bash
-    sha256sum zk-firma-digital_0.6.3_amd64.deb
+    sha256sum Zikuani_0.6.3_amd64.deb
     ```
     The result should match:
     ```bash
-    8c8f38ceae2d6b99c07396156c7ea3ccb915e705360ba3cd8bbbe408574622c4  zk-firma-digital_0.6.3_amd64.deb
+    8c8f38ceae2d6b99c07396156c7ea3ccb915e705360ba3cd8bbbe408574622c4  Zikuani_0.6.3_amd64.deb
     ```
 3. Install the Debian package:
     ```bash
-    sudo dpkg -i zk-firma-digital_0.6.3_amd64.deb
+    sudo dpkg -i Zikuani_0.6.3_amd64.deb
     ```
 4. Launch the program:
     * Insert your smart card into a USB port.
     * Run: 
         ```bash
-        /usr/share/zk-firma-digital/zk-firma-digital.bin
+        /usr/share/Zikuani/Zikuani.bin
         ```
     * Alternatively, search for the app in your application launcher.
   
 ### MacOS
 
 1. Download the installer:
-[MacOs Installer](https://app.sakundi.io:9090/zk-firma-digital.pkg)
+[MacOs Installer](https://app.sakundi.io:9090/Zikuani.pkg)
 
 2. Verify the sha256 hash:
     ```bash
-    sha256sum zk-firma-digital.pkg
+    sha256sum Zikuani.pkg
     ```
     The result should match:
     ```bash
-    c671b84bcea6e6d4261947d2e612ead6db9f0b8ead99321333551172662d6a39  zk-firma-digital.pkg
+    c671b84bcea6e6d4261947d2e612ead6db9f0b8ead99321333551172662d6a39  Zikuani.pkg
     ```
 3. Run the installer if the hash matches.
 
@@ -113,9 +113,9 @@ To run ZK-Firma-Digital, ensure your system meets at least the following hardwar
     * Insert your smart card into a USB port.
     * Run: 
         ```bash
-        "open /Applications/zk-firma-digital.app/Contents/MacOS/zk-firma-digital"
+        "open /Applications/Zikuani.app/Contents/MacOS/Zikuani"
         ```
-    * Alternatively, search for ZK Firma Digital in the Finder menu.
+    * Alternatively, search for Zikuani in the Finder menu.
 
 ## Build
 
@@ -123,8 +123,8 @@ To run ZK-Firma-Digital, ensure your system meets at least the following hardwar
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/kuronosec/zk-firma-digital
-    cd zk-firma-digital
+    git clone https://github.com/kuronosec/Zikuani
+    cd Zikuani
     ```
 2. Run the build script:
     ```bash
@@ -145,8 +145,8 @@ To run ZK-Firma-Digital, ensure your system meets at least the following hardwar
 
 2. Clone the Repository:
     ```bash
-    git clone https://github.com/kuronosec/zk-firma-digital.git
-    cd zk-firma-digital
+    git clone https://github.com/kuronosec/Zikuani.git
+    cd Zikuani
     ```
 3. Run the build script:
     ```bash
@@ -178,4 +178,4 @@ To try the system with a decentralized voting system go to:
 Other useful links:
 
 * PoC source code: [GitHub Repository](https://github.com/kuronosec/zk-voto-digital)
-* Example credential: [residence-credential.json](https://github.com/kuronosec/zk-firma-digital/blob/main/src/examples/residence-credential.json)
+* Example credential: [residence-credential.json](https://github.com/kuronosec/Zikuani/blob/main/src/examples/residence-credential.json)
