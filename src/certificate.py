@@ -11,6 +11,7 @@ from asn1crypto import pem, x509
 from PyKCS11 import *
 from configuration import Configuration
 from pathlib import Path
+from storage import Storage
 
 # This class interacts with the Smart Card and extracts the autentication certificate
 class Certificate:
@@ -45,6 +46,8 @@ class Certificate:
             )
         else:
             print("Unknown operating system")
+
+        self.storage = Storage(self.pin, self.credentials_path)
 
     def get_certificates(self):
         """
@@ -82,14 +85,21 @@ class Certificate:
             if "AUTENTICACION" in common_name:
                 result.append(common_name)
 
-                if not os.path.exists(self.credentials_path):
-                    os.makedirs(self.credentials_path)
+                if not self.storage.exists():
+                    self.storage.create_DB()
 
                 # cert is an instance of x509.Certificate
-                with open(self.config.certificate_path, 'wb') as f:
-                    pprint.pprint(cert.native["tbs_certificate"]["subject"])
-                    der_bytes = cert.dump()
-                    pem_bytes = pem.armor('CERTIFICATE', der_bytes)
-                    f.write(pem_bytes)
+                pprint.pprint(cert.native["tbs_certificate"]["subject"])
+                der_bytes = cert.dump()
+                pem_bytes = pem.armor('CERTIFICATE', der_bytes)
+                try:
+                    self.storage.insert_identity(
+                        "Firma Digital AUTENTICACION",
+                        pem_bytes,
+                        common_name
+                    )
+                    self.storage.close_database()
+                except Exception as e:
+                    logging.info("Firma Digital AUTENTICACION already exists", e)
 
         return True, result
