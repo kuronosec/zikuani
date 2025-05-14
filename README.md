@@ -70,25 +70,25 @@ To run Zikuani, ensure your system meets at least the following hardware require
 
 1. Download the installer:
     ```bash
-    wget https://app.sakundi.io:9090/Zikuani_0.6.3_amd64.deb
+    wget https://app.sakundi.io:9090/zikuani_0.7.0_amd64.deb
     ```
 2. Verify the sha256 hash:
     ```bash
-    sha256sum Zikuani_0.6.3_amd64.deb
+    sha256sum zikuani_0.7.0_amd64.deb
     ```
     The result should match:
     ```bash
-    8c8f38ceae2d6b99c07396156c7ea3ccb915e705360ba3cd8bbbe408574622c4  Zikuani_0.6.3_amd64.deb
+    8c8f38ceae2d6b99c07396156c7ea3ccb915e705360ba3cd8bbbe408574622c4  zikuani_0.7.0_amd64.deb
     ```
 3. Install the Debian package:
     ```bash
-    sudo dpkg -i Zikuani_0.6.3_amd64.deb
+    sudo dpkg -i zikuani_0.7.0_amd64.deb
     ```
 4. Launch the program:
     * Insert your smart card into a USB port.
     * Run: 
         ```bash
-        /usr/share/Zikuani/Zikuani.bin
+        /usr/share/zk-firma-digital/zk-firma-digital.bin
         ```
     * Alternatively, search for the app in your application launcher.
   
