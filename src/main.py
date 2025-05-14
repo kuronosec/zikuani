@@ -63,7 +63,7 @@ class MainWindow(QMainWindow):
         # Allow the QLabel to open external links
         self.file_label.setOpenExternalLinks(True)
 
-        self.setWindowTitle("Zero Knowledge - Firma Digital")
+        self.setWindowTitle("Zikuani")
         self.setGeometry(600, 400, 700, 400)
 
         # Create a QTabWidget

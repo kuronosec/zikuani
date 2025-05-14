@@ -39,7 +39,7 @@ class AuthenticationWindow(QMainWindow):
         if not os.path.exists(self.config.output_dir):
             os.makedirs(self.config.output_dir)
 
-        self.setWindowTitle("Zero Knowledge - Firma Digital")
+        self.setWindowTitle("Zikuani")
         self.setGeometry(600, 400, 700, 400)
 
         # Animated spinner using an animated GIF
