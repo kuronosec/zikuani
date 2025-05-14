@@ -3,8 +3,8 @@
 set -xe
 
 VERSION=0.7.0
-NAME='zk-firma-digital'
-PACKAGE='zk-firma-digital'
+NAME='zikuani'
+PACKAGE='zikuani'
 ARCH='amd64'
 
 docker build -q -t debbuilder -f builder/Dockerfile_Debian .
