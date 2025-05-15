@@ -1,4 +1,4 @@
-# Zikuani
+ # Zikuani
 
 ## Overview
 
@@ -44,15 +44,15 @@ To run Zikuani, ensure your system meets at least the following hardware require
 ### Windows
 
 1. Download the installer:
-[Windows Installer](https://app.sakundi.io:9090/zikuani-0.6.3.exe)
+[Windows Installer](https://app.sakundi.io:9090/zikuani-0.7.0.exe)
 
 2. Verify the sha256 hash:
     ```bash
-    certutil -hashfile "C:\file\path\zikuani-0.6.3.exe" SHA256
+    certutil -hashfile "C:\file\path\zikuani-0.7.0.exe" SHA256
     ```
     The result should match:
     ```bash
-    c116a271668e9e430116cd335f7bb4128d1af4d387ad7593330850932281cf07  zikuani-0.6.3.exe
+    2ae500fa87f231462a04b721cae48477e64e9d98addaa4118e8b82d7531c0313  zikuani-0.7.0.exe
     ```
 3. Run the installer if the hash matches.
 
@@ -95,15 +95,15 @@ To run Zikuani, ensure your system meets at least the following hardware require
 ### MacOS
 
 1. Download the installer:
-[MacOs Installer](https://app.sakundi.io:9090/zikuani-0.6.3.pkg)
+[MacOs Installer](https://app.sakundi.io:9090/zikuani-0.7.0.pkg)
 
 2. Verify the sha256 hash:
     ```bash
-    sha256sum zikuani-0.6.3.pkg
+    sha256sum zikuani-0.7.0.pkg
     ```
     The result should match:
     ```bash
-    c671b84bcea6e6d4261947d2e612ead6db9f0b8ead99321333551172662d6a39  zikuani-0.6.3.pkg
+    c15b4b157648c300e49e0434c3a74a14622df0a1a69c08141a9a00ff6e7a1765  zikuani-0.7.0.pkg
     ```
 3. Run the installer if the hash matches.
 
