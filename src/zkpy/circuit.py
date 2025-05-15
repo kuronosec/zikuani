@@ -72,8 +72,10 @@ class Circuit:
 
         # Check what operation system we re running on
         self.snarkjs_command = "snarkjs"
+        self.creation_flags = 0
         if os.name == 'nt':
             self.snarkjs_command = "snarkjs.cmd"
+            self.creation_flags = subprocess.CREATE_NO_WINDOW
 
     def compile(self):
         """Compiles the circuit and generates an r1cs file, a symbols file, a wasm file, and a js dir"""
@@ -81,6 +83,7 @@ class Circuit:
         proc = subprocess.run(
             ["circom", self.circ_file, "--r1cs", "--sym", "--wasm",
              '-o', self.output_dir, '-l' , self.node_modules_dir],
+            creationflags=self.creation_flags,
             capture_output=True,
             cwd=self.working_dir,
             text=True
@@ -112,7 +115,11 @@ class Circuit:
         if self.r1cs_file is None or not utils.exists(self.r1cs_file):
             raise ValueError(f"r1cs file {self.r1cs_file} does not exist.")
         proc = subprocess.run(
-            [self.snarkjs_command, "r1cs", "info", self.r1cs_file], capture_output=True, cwd=self.working_dir, check=True
+            [self.snarkjs_command, "r1cs", "info", self.r1cs_file],
+            creationflags=self.creation_flags,
+            capture_output=True,
+            cwd=self.working_dir,
+            check=True
         )
         return proc.stdout.decode()
 
@@ -124,6 +131,7 @@ class Circuit:
             raise ValueError(f"sym file {self.sym_file} does not exist.")
         proc = subprocess.run(
             [self.snarkjs_command, "r1cs", "print", self.r1cs_file, self.sym_file],
+            creationflags=self.creation_flags,
             capture_output=True,
             cwd=self.working_dir,
             check=True,
@@ -137,6 +145,7 @@ class Circuit:
         json_output_file = utils.get_r1cs_file(self.circ_file, self.output_dir) + '.json'
         proc = subprocess.run(
             [self.snarkjs_command, "r1cs", "export", "json", self.r1cs_file, json_output_file],
+            creationflags=self.creation_flags,
             capture_output=True,
             cwd=self.working_dir,
             check=True,
@@ -159,6 +168,7 @@ class Circuit:
         gen_wtns_file = os.path.join(self.js_dir, "generate_witness.js")
         proc = subprocess.run(
             ["node", gen_wtns_file, self.wasm_file, input_file, output_file],
+            creationflags=self.creation_flags,
             capture_output=True,
             cwd=self.working_dir,
             check=True,
@@ -184,6 +194,7 @@ class Circuit:
             raise ValueError("scheme must either be 'plonk', 'fflonk', or 'groth16'")
         proc = subprocess.run(
             [self.snarkjs_command, scheme, "setup", self.r1cs_file, ptau.ptau_file, output_file],
+            creationflags=self.creation_flags,
             capture_output=True,
             cwd=self.working_dir,
             check=True,
@@ -210,6 +221,7 @@ class Circuit:
                 "-v",
                 f'-e={entropy}',
             ],
+            creationflags=self.creation_flags,
             capture_output=True,
             cwd=self.working_dir,
             check=True,
@@ -232,6 +244,7 @@ class Circuit:
         proc = subprocess.run(
             [self.snarkjs_command, scheme, "prove",
             self.zkey_file, self.wtns_file, proof_out, public_out],
+            creationflags=self.creation_flags,
             capture_output=True,
             cwd=self.working_dir,
             check=True,
@@ -252,6 +265,7 @@ class Circuit:
         proc = subprocess.run(
             [self.snarkjs_command, "zkey", "verify",
               self.r1cs_file, ptau.ptau_file, zkey_file],
+            creationflags=self.creation_flags,
             capture_output=True,
             cwd=self.working_dir,
             check=True,
@@ -276,6 +290,7 @@ class Circuit:
         subprocess.run(
             [self.snarkjs_command, "zkey", "export", "verificationkey",
              zkey_file, output_file],
+            creationflags=self.creation_flags,
             capture_output=True,
             cwd=self.working_dir,
             check=True,
@@ -302,6 +317,7 @@ class Circuit:
         proc = subprocess.run(
             [self.snarkjs_command, scheme, "verify",
              vkey_file, public_file, proof_file],
+            creationflags=self.creation_flags,
             capture_output=True,
             cwd=self.working_dir,
             check=True,
@@ -345,6 +361,7 @@ class Circuit:
         proc = subprocess.run(
             [self.snarkjs_command, "zkey", "export", "solidityverifier",
              self.zkey_file, output_file],
+            creationflags=self.creation_flags,
             capture_output=True,
             cwd=self.working_dir,
             check=True,
