@@ -52,7 +52,7 @@ To run Zikuani, ensure your system meets at least the following hardware require
     ```
     The result should match:
     ```bash
-    c116a271668e9e430116cd335f7bb4128d1af4d387ad7593330850932281cf07  zikuani-0.7.0.exe
+    2ae500fa87f231462a04b721cae48477e64e9d98addaa4118e8b82d7531c0313  zikuani-0.7.0.exe
     ```
 3. Run the installer if the hash matches.
 
