@@ -44,15 +44,15 @@ To run Zikuani, ensure your system meets at least the following hardware require
 ### Windows
 
 1. Download the installer:
-[Windows Installer](https://app.sakundi.io:9090/Zikuani-0.6.3.exe)
+[Windows Installer](https://app.sakundi.io:9090/zikuani-0.6.3.exe)
 
 2. Verify the sha256 hash:
     ```bash
-    certutil -hashfile "C:\file\path\Zikuani-0.6.3.exe" SHA256
+    certutil -hashfile "C:\file\path\zikuani-0.6.3.exe" SHA256
     ```
     The result should match:
     ```bash
-    c116a271668e9e430116cd335f7bb4128d1af4d387ad7593330850932281cf07  Zikuani-0.6.3.exe
+    c116a271668e9e430116cd335f7bb4128d1af4d387ad7593330850932281cf07  zikuani-0.6.3.exe
     ```
 3. Run the installer if the hash matches.
 
@@ -62,48 +62,48 @@ To run Zikuani, ensure your system meets at least the following hardware require
     * Insert your smart card into a USB port.
     * Run: 
         ```bash
-        "C:\Program Files\Zikuani\Zikuani.exe"
+        "C:\Program Files\zk-firma-digital\zk-firma-digital.exe"
         ```
-    * Alternatively, search for Zikuani in the Start menu.
+    * Alternatively, search for zk-firma-digital in the Start menu.
 
 ### Linux (Debian)
 
 1. Download the installer:
     ```bash
-    wget https://app.sakundi.io:9090/Zikuani_0.6.3_amd64.deb
+    wget https://app.sakundi.io:9090/zikuani_0.7.0_amd64.deb
     ```
 2. Verify the sha256 hash:
     ```bash
-    sha256sum Zikuani_0.6.3_amd64.deb
+    sha256sum zikuani_0.7.0_amd64.deb
     ```
     The result should match:
     ```bash
-    8c8f38ceae2d6b99c07396156c7ea3ccb915e705360ba3cd8bbbe408574622c4  Zikuani_0.6.3_amd64.deb
+    a37dda386747edd11c30e1ed3c63a09cf1bbb3cb6f3288208ccc231684ce46b4  zikuani_0.7.0_amd64.deb
     ```
 3. Install the Debian package:
     ```bash
-    sudo dpkg -i Zikuani_0.6.3_amd64.deb
+    sudo dpkg -i zikuani_0.7.0_amd64.deb
     ```
 4. Launch the program:
     * Insert your smart card into a USB port.
     * Run: 
         ```bash
-        /usr/share/Zikuani/Zikuani.bin
+        /usr/share/zk-firma-digital/zk-firma-digital.bin
         ```
     * Alternatively, search for the app in your application launcher.
   
 ### MacOS
 
 1. Download the installer:
-[MacOs Installer](https://app.sakundi.io:9090/Zikuani.pkg)
+[MacOs Installer](https://app.sakundi.io:9090/zikuani-0.6.3.pkg)
 
 2. Verify the sha256 hash:
     ```bash
-    sha256sum Zikuani.pkg
+    sha256sum zikuani-0.6.3.pkg
     ```
     The result should match:
     ```bash
-    c671b84bcea6e6d4261947d2e612ead6db9f0b8ead99321333551172662d6a39  Zikuani.pkg
+    c671b84bcea6e6d4261947d2e612ead6db9f0b8ead99321333551172662d6a39  zikuani-0.6.3.pkg
     ```
 3. Run the installer if the hash matches.
 
@@ -113,9 +113,9 @@ To run Zikuani, ensure your system meets at least the following hardware require
     * Insert your smart card into a USB port.
     * Run: 
         ```bash
-        "open /Applications/Zikuani.app/Contents/MacOS/Zikuani"
+        "open /Applications/zk-firma-digital/Contents/MacOS/zk-firma-digital"
         ```
-    * Alternatively, search for Zikuani in the Finder menu.
+    * Alternatively, search for zk-firma-digital in the Finder menu.
 
 ## Build
 
