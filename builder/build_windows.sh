@@ -2,7 +2,7 @@
 
 set -xe
 
-VERSION=0.6.3
+VERSION=0.7.0
 
 OLD_PATH=$(pwd)
 echo $OLD_PATH
@@ -24,5 +24,5 @@ cp $OLD_PATH/src/spinner.gif $OLD_PATH/build
 
 iscc installer.iss
 mkdir -p $OLD_PATH/release/
-cp Output/mysetup.exe $OLD_PATH/release/zk-firma-digital-$VERSION.exe
+cp Output/mysetup.exe $OLD_PATH/release/zikuani-$VERSION.exe
 exit 0
