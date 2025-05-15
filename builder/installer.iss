@@ -7,8 +7,8 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING .ISS SCRIPT FILES!
 
 [Setup]
-AppName=ZK Firma Digital
-AppVersion=0.6.3
+AppName=Zikuani
+AppVersion=0.7.0
 WizardStyle=modern
 DefaultDirName={autopf}\zk-firma-digital
 DefaultGroupName=ZK Firma Digital
