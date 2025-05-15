@@ -42,8 +42,8 @@ END
 
 tee -a $DEB_HOMEDIR/usr/share/applications/zk-firma-digital.desktop << END
 [Desktop Entry]
-Name=ZK Firma Digital
-Comment=Firma Digital para Costa Rica
+Name=Zikuani
+Comment=Private Identity Wallet
 Exec=/usr/share/zk-firma-digital/zk-firma-digital.bin %u
 Icon=/usr/share/zk-firma-digital/sakundi.png
 Terminal=false

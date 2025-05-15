@@ -78,8 +78,8 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <source>Zero Knowledge - Firma Digital</source>
-        <translation type="vanished">Zero Knowledge - Firma Digital</translation>
+        <source>Zikuani</source>
+        <translation type="vanished">Zikuani</translation>
     </message>
     <message>
         <location filename="main.py" line="61"/>
