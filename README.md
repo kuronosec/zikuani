@@ -78,7 +78,7 @@ To run Zikuani, ensure your system meets at least the following hardware require
     ```
     The result should match:
     ```bash
-    a37dda386747edd11c30e1ed3c63a09cf1bbb3cb6f3288208ccc231684ce46b4  zikuani_0.7.0_amd64.deb
+    dea667d8e89c283c9dc5ee2cd79ec4d81c02b2aacae8f0dd7235c781d32b95cc  zikuani_0.7.0_amd64.deb
     ```
 3. Install the Debian package:
     ```bash
