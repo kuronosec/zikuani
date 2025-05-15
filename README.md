@@ -95,15 +95,15 @@ To run Zikuani, ensure your system meets at least the following hardware require
 ### MacOS
 
 1. Download the installer:
-[MacOs Installer](https://app.sakundi.io:9090/Zikuani.pkg)
+[MacOs Installer](https://app.sakundi.io:9090/zikuani-0.6.3.pkg)
 
 2. Verify the sha256 hash:
     ```bash
-    sha256sum Zikuani.pkg
+    sha256sum zikuani-0.6.3.pkg
     ```
     The result should match:
     ```bash
-    c671b84bcea6e6d4261947d2e612ead6db9f0b8ead99321333551172662d6a39  Zikuani.pkg
+    c671b84bcea6e6d4261947d2e612ead6db9f0b8ead99321333551172662d6a39  zikuani-0.6.3.pkg
     ```
 3. Run the installer if the hash matches.
 
@@ -113,9 +113,9 @@ To run Zikuani, ensure your system meets at least the following hardware require
     * Insert your smart card into a USB port.
     * Run: 
         ```bash
-        "open /Applications/Zikuani.app/Contents/MacOS/Zikuani"
+        "open /Applications/zk-firma-digital/Contents/MacOS/zk-firma-digital"
         ```
-    * Alternatively, search for Zikuani in the Finder menu.
+    * Alternatively, search for zk-firma-digital in the Finder menu.
 
 ## Build
 
