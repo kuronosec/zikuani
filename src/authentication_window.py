@@ -255,7 +255,8 @@ class AuthenticationWindow(QMainWindow):
             'user_id': self.payload['user_id'],
             'client_id': self.payload['auth_data']['client_id'],
             'redirect_uri': self.payload['auth_data']['redirect_uri'],
-            'verifiable_credential': json_str
+            'verifiable_credential': json_str,
+            'scope': 'zk-firma-digital'
         }
 
         # Create credential and store it in a file for the user to utilize
