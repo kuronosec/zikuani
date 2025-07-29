@@ -192,7 +192,7 @@ Other useful links:
 | **Universal Verifier V2**  | 0x1df35a82599809BEEa7f3c1Ce24e10d1F0a26914 |
 | **Identity Tree Store** | 0x5c9Ab5CFB628034987f8f083E3BC39dB09bb8DD1 |
 
-## List of Rarimo Smart contracts deployed in BlockDag testnet
+## List of Rarimo's ZK Passport Smart Contracts deployed in BlockDag testnet
 
 |     Smart contract      |     Address                                |
 |:-----------------------:|:------------------------------------------:|
@@ -201,4 +201,3 @@ Other useful links:
 |    **PoseidonT4**    | 0x4DdA2CdaaCBaea59F23976bA08041094F2115B10 |
 |    **PoseidonUnit3L**     | 0xea0c42239213C2f31FF09373133650F615E33cbF |
 | **RegistrationSMT**  | 0x9C01fc3f623DD7290868a27aC97e0C2B20C7C475 |
-
