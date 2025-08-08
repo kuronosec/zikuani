@@ -8,7 +8,7 @@
 
 [Setup]
 AppName=Zikuani
-AppVersion=0.7.0
+AppVersion=0.8.1
 WizardStyle=modern
 DefaultDirName={autopf}\zk-firma-digital
 DefaultGroupName=ZK Firma Digital
