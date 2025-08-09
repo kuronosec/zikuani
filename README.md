@@ -44,15 +44,15 @@ To run Zikuani, ensure your system meets at least the following hardware require
 ### Windows
 
 1. Download the installer:
-[Windows Installer](https://app.sakundi.io:9090/zikuani-0.7.0.exe)
+[Windows Installer](https://app.sakundi.io:9090/zikuani-0.8.1.exe)
 
 2. Verify the sha256 hash:
     ```bash
-    certutil -hashfile "C:\file\path\zikuani-0.7.0.exe" SHA256
+    certutil -hashfile "C:\file\path\zikuani-0.8.1.exe" SHA256
     ```
     The result should match:
     ```bash
-    5763d7443fc28c63610cbec6c02b408004b19fd7bf0943537d74cb169728d8cf  zikuani-0.7.0.exe
+    20feed43e22531a87e06cfbc35cbb69b346a251ed1c2c8127e260b29577f68f1  zikuani-0.8.1.exe
     ```
 3. Run the installer if the hash matches.
 
