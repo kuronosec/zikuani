@@ -95,15 +95,15 @@ To run Zikuani, ensure your system meets at least the following hardware require
 ### MacOS
 
 1. Download the installer:
-[MacOs Installer](https://app.sakundi.io:9090/zikuani-0.7.0.pkg)
+[MacOs Installer](https://app.sakundi.io:9090/zikuani-0.8.1.pkg)
 
 2. Verify the sha256 hash:
     ```bash
-    sha256sum zikuani-0.7.0.pkg
+    sha256sum zikuani-0.8.1.pkg
     ```
     The result should match:
     ```bash
-    c15b4b157648c300e49e0434c3a74a14622df0a1a69c08141a9a00ff6e7a1765  zikuani-0.7.0.pkg
+    d35bf1dc5a176adcfb521a2ff6007a83a4908ae76a55c59b3ae279f41232962b  zikuani-0.8.1.pkg
     ```
 3. Run the installer if the hash matches.
 
