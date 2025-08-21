@@ -7,7 +7,8 @@ async function main() {
     `../deployed-contracts/ethereum.json`,
   );
 
-  const addresses = addressesJson.amoyAddresses;
+  // const addresses = addressesJson.amoyAddresses;
+  const addresses = addressesJson.blockdagTestnetAddresses;
 
   const ZKFirmaDigitalCredentialIssuer = addresses.ZKFirmaDigitalCredentialIssuer;
   const voteScope = Math.floor(Math.random() * 100000);
