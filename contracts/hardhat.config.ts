@@ -15,6 +15,9 @@ const config: HardhatUserConfig = {
       {
         version: '0.8.16'
       },
+      {
+        version: '0.8.28'
+      },
     ]
   },
   paths: {
